@@ -35,12 +35,12 @@ export class App extends React.Component {
     const total = this.countTotalFeedback();
     const totalPositivePercentage = this.countPositiveFeedbackPercentage();
     return (
-      <div className="app">
+      <div className="App">
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
             onLeaveFeedback={this.handleClickButton}
-          ></FeedbackOptions>
+          />
         </Section>
         <Section title="Statistics">
           {total ? (
@@ -52,7 +52,7 @@ export class App extends React.Component {
               positivePercentage={totalPositivePercentage}
             />
           ) : (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message="There is no feedback" />
           )}
         </Section>
       </div>
